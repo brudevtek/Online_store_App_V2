@@ -1,5 +1,15 @@
+import ListOfItems from '../components/ListOfItems';
+
+import PageLayout from '../layout/PageLayout';
+
 function MenPage() {
-  return <h1>Men</h1>;
+  return (
+    <>
+      <PageLayout>
+        <ListOfItems />
+      </PageLayout>
+    </>
+  );
 }
 
 export default MenPage;

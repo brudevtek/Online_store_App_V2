@@ -1,0 +1,9 @@
+.one_item_layout {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 200px;
+  font-family: 'roboto';
+  margin: 20px;
+  /* overflow: hidden; */
+}
