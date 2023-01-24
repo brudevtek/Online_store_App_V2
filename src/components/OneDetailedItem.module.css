@@ -1,16 +1,34 @@
-.item_img_div {
+.detailed_item_page {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
-.item_img_div img {
-  height: 200px;
-  width: 170px;
+.item_imag_div {
+  padding-top: 20px;
+  padding-left: 40px;
+}
+
+.detailed_item_right_side {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  padding-top: 30px;
+  min-width: 400px;
+}
+
+.item_imag_div img {
+  height: 500px;
+  width: 450px;
+}
+
+.item_imag_div img:hover {
+  height: 700px;
+  width: 550px;
 }
 .item_title_para_div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
@@ -24,29 +42,24 @@
   margin-left: 10px;
 }
 
+.available_colors .color {
+  height: 30px;
+  width: 30px;
+  border: 1px solid rgb(59, 60, 58);
+  cursor: pointer;
+}
+
 .available_colors .color_1 {
   background-color: #5cb55c;
-  height: 15px;
-  width: 15px;
-  border: 1px solid rgb(59, 60, 58);
 }
 .available_colors .color_2 {
   background-color: #ebad4e;
-  height: 15px;
-  width: 15px;
-  border: 1px solid rgb(59, 60, 58);
 }
 .available_colors .color_3 {
   background-color: #321c60;
-  height: 15px;
-  width: 15px;
-  border: 1px solid rgb(59, 60, 58);
 }
 .available_colors .color_4 {
   background-color: #d4aaca;
-  height: 15px;
-  width: 15px;
-  border: 1px solid rgb(59, 60, 58);
 }
 .available_sizes {
   margin-left: 10px;
@@ -79,4 +92,39 @@
   margin-left: 10px;
   margin-top: 2px;
   font-weight: normal;
+}
+
+.color_name h1 {
+  font-size: 20px;
+}
+
+.size_name h1 {
+  font-size: 20px;
+}
+
+.available_size_box {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.available_size_box div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+button {
+  background-color: black;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  height: 30px;
+  margin-top: 30px;
 }

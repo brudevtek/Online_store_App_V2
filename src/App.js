@@ -5,6 +5,7 @@ import MenPage from './pages/MenPage';
 import WomenPage from './pages/WomenPage';
 import NavBar from './components/NavBar';
 import CartPage from './pages/ShoppingCart';
+import DetailedItem from './pages/DetailedItem';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/women" element={<WomenPage />} />
         <Route path="/kids" element={<KidsPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/detailed" element={<DetailedItem />} />
       </Routes>
     </>
   );

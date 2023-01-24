@@ -1,4 +1,4 @@
-import ListOfItems from '../components/ListOfItems';
+import ListOfItemMen from '../components/ListOfItemMen';
 
 import PageLayout from '../layout/PageLayout';
 
@@ -6,7 +6,7 @@ function MenPage() {
   return (
     <>
       <PageLayout>
-        <ListOfItems />
+        <ListOfItemMen />
       </PageLayout>
     </>
   );

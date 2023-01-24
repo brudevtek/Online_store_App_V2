@@ -1,5 +1,15 @@
+import ListOfItemWomen from '../components/ListOfItemWomen';
+
+import PageLayout from '../layout/PageLayout';
+
 function WomenPage() {
-  return <h1>Women</h1>;
+  return (
+    <>
+      <PageLayout>
+        <ListOfItemWomen />
+      </PageLayout>
+    </>
+  );
 }
 
 export default WomenPage;
