@@ -1,11 +1,12 @@
 import classes from './OneDetailedItem.module.css';
 
+
 function OneDetailedItem(props) {
   return (
     <>
       <div className={classes.detailed_item_page}>
         <div className={classes.item_imag_div}>
-          <img src={props.image_url} alt="item_pic"></img>
+          <img src={("." + props.image_url)} alt="item_pic"></img>
         </div>
         <div className={classes.detailed_item_right_side}>
           <div className={classes.item_name}>

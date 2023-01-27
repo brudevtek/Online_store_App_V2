@@ -1,15 +1,16 @@
 import { shopitems } from '../data/database';
-import OneItem from '../components/OneItem';
-// import { v4 as uuidv4 } from 'uuid';
+import OneItem from './OneItem';
 import ItemLayout from '../layout/ItemLayout';
 
 function ListofItemMen() {
-  return shopitems.map((x) => {
-    if (x.gender === 'men') {
+  return shopitems
+    .filter((x) => x.gender === 'men')
+    .map((x) => {
       return (
-        <ItemLayout>
+        <ItemLayout key={x.id}>
           <OneItem
             key={x.id}
+            id={x.id}
             image_url={x.img}
             size1={x.size1}
             size2={x.size2}
@@ -21,7 +22,6 @@ function ListofItemMen() {
           />
         </ItemLayout>
       );
-    }
-  });
+    });
 }
 export default ListofItemMen;

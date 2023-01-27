@@ -3,13 +3,16 @@ import OneItem from './OneItem';
 // import { v4 as uuidv4 } from 'uuid';
 import ItemLayout from '../layout/ItemLayout';
 
+
 function ListofItemKids() {
-  return shopitems.map((x) => {
-    if (x.gender === 'kids') {
+  return shopitems
+    .filter((x) => x.gender === 'kids')
+    .map((x) => {
       return (
-        <ItemLayout>
+        <ItemLayout key={x.id}>
           <OneItem
             key={x.id}
+            id={x.id}
             image_url={x.img}
             size1={x.size1}
             size2={x.size2}
@@ -18,10 +21,10 @@ function ListofItemKids() {
             size5={x.size5}
             name={x.name}
             price={x.price}
+            uniqueid={x.id}
           />
         </ItemLayout>
       );
-    }
-  });
+    });
 }
 export default ListofItemKids;

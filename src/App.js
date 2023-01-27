@@ -16,7 +16,7 @@ function App() {
         <Route path="/women" element={<WomenPage />} />
         <Route path="/kids" element={<KidsPage />} />
         <Route path="/cart" element={<CartPage />} />
-        <Route path="/detailed" element={<DetailedItem />} />
+        <Route path="/detailed/:itemuniqueid" element={<DetailedItem/>} />
       </Routes>
     </>
   );
