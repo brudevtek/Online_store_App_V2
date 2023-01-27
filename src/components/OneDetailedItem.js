@@ -1,7 +1,7 @@
 import classes from './OneDetailedItem.module.css';
 import { useState } from 'react';
 // import NavBar from './NavBar';
-
+let dataToStore = [];
 function OneDetailedItem(props) {
   const [selectedSize, setSelectedSize] = useState('Choose Size');
   const onClickHandler = (event) => {
@@ -10,6 +10,22 @@ function OneDetailedItem(props) {
   const [selectedColor, setSelectedColor] = useState('Choose color');
   const addColorName = (event) => {
     setSelectedColor(event.target.getAttribute('data_color'));
+  };
+
+  const [cartButtonMessage, setCartButtonMessage] = useState(
+    'add to shopping cart'
+  );
+
+  const addToCart = () => {
+    console.log(selectedColor, selectedSize, props.id);
+
+    dataToStore.push({
+      color: selectedColor,
+      size: selectedSize,
+      selectedid: props.id,
+    });
+    localStorage.setItem('selecteditems', JSON.stringify(dataToStore));
+    setCartButtonMessage("Added!")
   };
   return (
     <>
@@ -61,7 +77,7 @@ function OneDetailedItem(props) {
             <div onClick={onClickHandler}>{props.size5}</div>
           </div>
           <div>
-            <button>add to shopping cart</button>
+            <button onClick={addToCart}>{cartButtonMessage}</button>
           </div>
           <div></div>
         </div>

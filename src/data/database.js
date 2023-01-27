@@ -1,5 +1,4 @@
-
-export const shopitems= [
+export const shopitems = [
   {
     id: 1,
     img: './image/image1.png',
@@ -373,8 +372,4 @@ export const shopitems= [
     price: 15.99,
   },
 ];
-;
-
-
-
-
+localStorage.setItem('rawdata', JSON.stringify(shopitems));

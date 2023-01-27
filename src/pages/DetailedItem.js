@@ -9,6 +9,7 @@ function DetailedItem() {
   return (
     <OneDetailedItem
       key={search[0].id}
+      id={search[0].id}
       image_url={search[0].img}
       size1={search[0].size1}
       size2={search[0].size2}

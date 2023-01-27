@@ -1,0 +1,35 @@
+.item {
+  margin-top: 10px;
+  width: 600px;
+  background-color: rgb(245, 240, 215);
+  border-radius: 10px;
+}
+
+.itemcard_img {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.itemcard_img img {
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+}
+
+.itemcard_img div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.itemcard_img div h1 {
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.itemcard_img div h2 {
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: lighter;
+}

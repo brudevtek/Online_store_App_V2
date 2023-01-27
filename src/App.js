@@ -4,7 +4,7 @@ import KidsPage from './pages/KidsPage';
 import MenPage from './pages/MenPage';
 import WomenPage from './pages/WomenPage';
 import NavBar from './components/NavBar';
-import CartPage from './pages/ShoppingCart';
+import ShoppingCart from './pages/ShoppingCart';
 import DetailedItem from './pages/DetailedItem';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<MenPage />} />
         <Route path="/women" element={<WomenPage />} />
         <Route path="/kids" element={<KidsPage />} />
-        <Route path="/cart" element={<CartPage />} />
+        <Route path="/cart" element={<ShoppingCart />} />
         <Route path="/detailed/:itemuniqueid" element={<DetailedItem/>} />
       </Routes>
     </>
