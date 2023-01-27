@@ -127,4 +127,5 @@ button {
   text-transform: uppercase;
   height: 30px;
   margin-top: 30px;
+  cursor: pointer;
 }

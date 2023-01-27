@@ -21,7 +21,6 @@ function ListofItemWomen() {
             size5={x.size5}
             name={x.name}
             price={x.price}
-            uniqueid={x.uniqueid}
           />
         </ItemLayout>
       );

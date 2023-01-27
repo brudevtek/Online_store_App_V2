@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom';
 function DetailedItem() {
   let { itemuniqueid } = useParams();
   let search = shopitems.filter((x) => x.id === parseInt(itemuniqueid));
-  console.log(search[0].id);
 
   return (
     <OneDetailedItem
