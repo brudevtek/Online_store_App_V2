@@ -1,7 +1,8 @@
 import classes from './OneDetailedItem.module.css';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { CartQtyContext } from '../App';
 // import NavBar from './NavBar';
-let dataToStore = [];
+let dataToStore = JSON.parse(localStorage.getItem('selecteditems')) || [];
 function OneDetailedItem(props) {
   const [selectedSize, setSelectedSize] = useState('Choose Size');
   const onClickHandler = (event) => {
@@ -15,6 +16,7 @@ function OneDetailedItem(props) {
   const [cartButtonMessage, setCartButtonMessage] = useState(
     'add to shopping cart'
   );
+  const [qtyCart, setQtyCart] = useContext(CartQtyContext);
 
   const addToCart = () => {
     console.log(selectedColor, selectedSize, props.id);
@@ -25,7 +27,10 @@ function OneDetailedItem(props) {
       selectedid: props.id,
     });
     localStorage.setItem('selecteditems', JSON.stringify(dataToStore));
-    setCartButtonMessage("Added!")
+    setCartButtonMessage("Added!");
+
+    setQtyCart(dataToStore.length);
+ 
   };
   return (
     <>
