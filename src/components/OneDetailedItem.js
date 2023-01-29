@@ -1,13 +1,18 @@
 import classes from './OneDetailedItem.module.css';
 import { useContext, useState } from 'react';
 import { CartQtyContext } from '../App';
+import {v4 as uuid} from "uuid"
 // import NavBar from './NavBar';
 let dataToStore = JSON.parse(localStorage.getItem('selecteditems')) || [];
+
+
 function OneDetailedItem(props) {
   const [selectedSize, setSelectedSize] = useState('Choose Size');
   const onClickHandler = (event) => {
     setSelectedSize(event.target.innerText);
   };
+
+
   const [selectedColor, setSelectedColor] = useState('Choose color');
   const addColorName = (event) => {
     setSelectedColor(event.target.getAttribute('data_color'));
@@ -16,20 +21,25 @@ function OneDetailedItem(props) {
   const [cartButtonMessage, setCartButtonMessage] = useState(
     'add to shopping cart'
   );
-  const [qtyCart, setQtyCart] = useContext(CartQtyContext);
+
+  
+  const [qtyCart,setQtyCart] = useContext(CartQtyContext);
 
   const addToCart = () => {
-    console.log(selectedColor, selectedSize, props.id);
-
+    const unique_id=uuid()
+    
     dataToStore.push({
       color: selectedColor,
       size: selectedSize,
       selectedid: props.id,
+      unique_id: unique_id,
     });
+    
     localStorage.setItem('selecteditems', JSON.stringify(dataToStore));
     setCartButtonMessage("Added!");
 
     setQtyCart(dataToStore.length);
+    console.log(dataToStore.length);
  
   };
   return (

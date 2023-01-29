@@ -8,7 +8,6 @@
 .itemcard_img {
   display: flex;
   flex-direction: row;
-  
 }
 
 .itemcard_img img {
@@ -32,4 +31,13 @@
   font-size: 15px;
   text-transform: capitalize;
   font-weight: lighter;
+}
+
+.itemcard_img div button {
+  background-color: crimson;
+  font-size: 10px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  height: 15px;
+  cursor: pointer;
 }

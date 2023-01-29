@@ -1,6 +1,9 @@
 import classes from './OneCartItem.module.css';
 
 function OneCartItem(props) {
+
+  
+
   // console.log(props.image)
   return (
     <>
@@ -12,6 +15,7 @@ function OneCartItem(props) {
             <h2>Size: {props.size}</h2>
             <h2>Color: {props.color}</h2>
             <h2>${props.price}</h2>
+            <button onClick={props.removeitem}>remove item</button>
           </div>
         </div>
       </div>

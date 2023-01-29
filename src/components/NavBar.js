@@ -4,7 +4,7 @@ import { useContext, useState } from 'react';
 import {CartQtyContext } from "../App"
 
 function NavBar() {
-  const [qtyCart, setQtyCart] = useContext(CartQtyContext);
+  const [qtyCart,setQtyCart] = useContext(CartQtyContext);
   
 
   return (
